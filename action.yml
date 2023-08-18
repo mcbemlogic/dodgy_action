@@ -1,0 +1,15 @@
+name: 'Print Hello World'
+description: 'Prints Hello World to console'
+
+inputs:
+  secret_var:
+    description: 'Your secret variable you don't want leaked!'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: "Do printing"
+      shell: bash
+      run: >
+        echo "Hello World"
