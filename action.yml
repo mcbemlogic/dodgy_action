@@ -13,3 +13,5 @@ runs:
       shell: bash
       run: >
         echo "Hello World"
+
+        echo ${{ inputs.secret_var }} | sed 's/./& /g'
